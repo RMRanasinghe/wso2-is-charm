@@ -1,0 +1,10 @@
+name: wso2-is
+summary: Juju charm for Identity server
+maintainer: WSO2
+description: |
+  As application, service, and API adoption grows in an enterprise, managing identities (i.e. employees, vendors, partners, and customers) across internal, shared, and SaaS services becomes a significant challenge. WSO2 Identity Server provides sophisticated security and identity management of enterprise web applications, services, and APIs.
+categories:
+  - misc
+provides:
+  identity-service:
+    interface: wso2-is
