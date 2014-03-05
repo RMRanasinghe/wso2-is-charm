@@ -2,17 +2,24 @@
 
 set -e
 
-juju-log "Installing java runtime environment"
-apt-get install -y openjdk-7-jre
+juju-log "Installing java runtime environment...."
+apt-get install -y openjdk-6-jre unzip
+
+juju-log "setting up JAVA_HOME"
+export JAVA_HOME="/usr/lib/jvm/java-6-openjdk-amd64"
 
 downloadLink="http://atuwa.private.wso2.com/Products/IS/wso2is-3.2.3.zip"
 
-juju-log "Fetching WSO2-IS from $downloadLink"
+juju-log "Fetching WSO2-IS from $downloadLink ...."
 wget $downloadLink -O /tmp/is.zip
 
-juju-log "Extracting WSO2-IS"
-unzip /temp/is.zip /opt/
+cd /opt/
 
-mv /opt/wso2is* /opt/wso2is
+juju-log "Extracting WSO2-IS...."
+unzip /tmp/is.zip
+
+juju-log "renaming folder...."
+mv wso2is* wso2is
+
 
 

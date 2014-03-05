@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/opt/wso2is/bin/wso2server.sh --stop
+#/opt/wso2is/bin/wso2server.sh --stop

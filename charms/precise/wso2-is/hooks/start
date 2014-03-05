@@ -1,4 +1,6 @@
 #!/bin/bash
+juju-log "setting JAVA_HOME...."
+export JAVA_HOME="/usr/lib/jvm/java-6-openjdk-amd64"
 
 /opt/wso2is/bin/wso2server.sh --stop
 /opt/wso2is/bin/wso2server.sh
